@@ -1,0 +1,28 @@
+{
+  "searchDropdown": {
+    "woman": [
+      "Dresses",
+      "Tops",
+      "Sweaters/Knits",
+      "Jackets/Coats",
+      "Blazers",
+      "Denim",
+      "Leggings/Pants",
+      "Skirts/Shorts",
+      "Accessories" ,
+      "Bags/Purses",
+      "Swimwear/Underwear",
+      "Nightwear",
+      "Shoes",
+      "Beauty"
+    ],
+    "men": [
+      "Tees/Tank tops",
+      "Shirts/Polos",
+      "Sweaters",
+      "Sweatshirts/Hoodies",
+      "Blazers",
+      "Jackets/Vests"
+    ]
+  }
+}

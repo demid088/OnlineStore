@@ -1,0 +1,50 @@
+@import './_font.css';
+
+:root {
+  /* sizes */
+  --site-width: 1600px;
+  --container-width: 1140px;
+  /* font */
+  --font-family: 'Lato', sans-serif;
+  --font-size: 14px;
+  --font-color: #222;
+  /* colors */
+  --bg-color: #fff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--font-color);
+
+  max-width: var(--site-width);
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: var(--bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  margin-top: 1em;
+}
+
+input {
+  margin: 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  margin: 0 auto;
+}
