@@ -9,90 +9,12 @@ import data from '../DATA.JSON'
 const searchDropdown = data.searchDropdown
 const dataKeys = Object.keys(searchDropdown)
 console.log(searchDropdown)
-//=========================================== DATABASE
+//=========================================== 
 
 function Header() {
   return (
     <header className="header">
-
-      <nav>
-        <div className="nav-wrapper row">
-
-          <div className="header__logo col s2 left">
-            <a href="#!" className="brand-logo">
-              <img className="responsive-img" src={logo} />
-            </a>
-          </div>
-
-          <div className="col s8 center">
-            <ul className="hide-on-med-and-down">
-              {/* <!-- Dropdown Trigger --> */}
-              <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Browse<i className="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-          </div>
-
-          <div className="col s2 right">
-            <a class="btn-floating white">
-              <i class="material-icons black-text">shopping_cart</i>
-            </a>
-            <a className="dropdown-trigger" href="#!" data-target="dropdown2">My Account<i className="material-icons">arrow_drop_down</i></a>
-          </div> 
-        </div>
-      </nav>
-
-      {/* <!-- Dropdown Structure --> */}
-      <ul id="dropdown1" className="dropdown-content">
-        {
-          dataKeys.map((caption, index) => {
-            return (
-              <Fragment key={index}>
-                <li className="divider" />
-                <li className=''><b>{caption.toUpperCase()}</b></li>
-                <li className="divider" />
-                {
-                  searchDropdown[caption].map((item, index) => {
-                    return(
-                      <li key={index}><a href="#">{item}</a></li>
-                    )
-                })}
-              </Fragment>
-            )
-          })
-        }
-      </ul>
-
-      {/* ==========ВРУЧНУЮ НАФУЙ========== */}
-
-      <div className="header__hand row yellow">
-
-        <div className="header__logo col s3">
-          <a className='header__logo_link' href="#">
-            <img src={logo} alt="logo" />
-          </a>
-        </div>
-
-        <div className="header__search col s6">
-          <button className='btn search__button_browse'>
-            <span>Browse</span>
-            <i className="material-icons">arrow_drop_down</i>
-          </button>
-          {/* <input type="search" name="search__input" id="search__input" /> */}
-          <input type="" name="search__input" id="search__input" />
-          <button className='btn search__button'>
-            <i className="material-icons">search</i>
-          </button>
-        </div>
-
-        <div className="header__account col s3">
-          <i class="material-icons black-text">shopping_cart</i>
-          <button className='btn'>
-            <span>My Account</span>
-            <i className="material-icons">arrow_drop_down</i>
-          </button>
-        </div>
-
-      </div>
-
+      <button type="button" class="btn btn-primary">Primary</button>
     </header>
   );
 }
@@ -143,4 +65,139 @@ BRAND
 <div className="header__account col right">
 
 </div> 
+
+
+      //=========================================== СТАРАЯ!!!!!!!!!!!
+      <nav>
+        <div className="nav-wrapper row">
+
+          <div className="header__logo col s2 left">
+            <a href="#!" className="brand-logo">
+              <img className="responsive-img" src={logo} />
+            </a>
+          </div>
+
+          <div className="col s8 center">
+            <ul className="hide-on-med-and-down">
+              <!-- Dropdown Trigger -->
+              <li><a className="dropdown-trigger" href="#!" data-target="dropdown">Browse<i className="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+
+          <div className="col s2 right">
+            <a class="btn-floating white">
+              <i class="material-icons black-text">shopping_cart</i>
+            </a>
+            <a className="dropdown-trigger" href="#!" data-target="dropdown2">My Account<i className="material-icons">arrow_drop_down</i></a>
+          </div> 
+        </div>
+      </nav>
+
+      <!-- Dropdown Structure -->
+      <ul id="dropdown" className="dropdown-content">
+        {
+          dataKeys.map((caption, index) => {
+            return (
+              <Fragment key={index}>
+                <li className="divider" />
+                <li className=''><b>{caption.toUpperCase()}</b></li>
+                <li className="divider" />
+                {
+                  searchDropdown[caption].map((item, index) => {
+                    return(
+                      <li key={index}><a href="#">{item}</a></li>
+                    )
+                })}
+              </Fragment>
+            )
+          })
+        }
+      </ul>
+
+      {/* ==========ВРУЧНУЮ НАФУЙ==========
+
+      <div className="header__hand row yellow">
+
+        <div className="header__logo col s3">
+          <a className='header__logo_link' href="#">
+            <img src={logo} alt="logo" />
+          </a>
+        </div>
+
+        <div className="header__search col s6">
+          <button className='btn search__button_browse'>
+            <span>Browse</span>
+            <i className="material-icons">arrow_drop_down</i>
+          </button>
+          {/* <input type="search" name="search__input" id="search__input" />
+          <input type="" name="search__input" id="search__input" />
+          <button className='btn search__button'>
+            <i className="material-icons">search</i>
+          </button>
+        </div>
+
+        <div className="header__account col s3">
+          <i class="material-icons black-text">shopping_cart</i>
+          <button className='btn'>
+            <span>My Account</span>
+            <i className="material-icons">arrow_drop_down</i>
+          </button>
+        </div>
+
+      </div>
+
+
+      {/* <!-- Dropdown Structure --> *
+      <ul id="dropdown1" className="dropdown-content">
+        {
+          dataKeys.map((caption, index) => {
+            return (
+              <Fragment key={index}>
+                <li className="divider" />
+                <li><b>{caption.toUpperCase()}</b></li>
+                <li className="divider" />
+                {
+                  searchDropdown[caption].map((item, index) => {
+                    return(
+                      <li key={index}><a href="#">{item}</a></li>
+                    )
+                })}
+              </Fragment>
+            )
+          })
+        }
+      </ul>
+      {/* NAV *
+      <nav>
+        <div class="nav-wrapper row">
+          {/* LOGO *
+          <div className="col s3">
+            <a href="#!" class="brand-logo col s3">Logo</a>
+          </div>
+          
+          {/* Search Bar *
+          <div className="col s6">
+            <form className=''>
+              <div class="input-field col s6">
+                <input id="search" type="search" required />
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+
+          {/* Account *
+          <div className="col s3">
+            <ul class="right hide-on-med-and-down col s3">
+              <li><a class="btn-floating red">
+                    <i class="material-icons">shopping_cart</i>
+                  </a></li>
+              {/* <!-- Dropdown Trigger --> *
+              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">My Account<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+
 */}

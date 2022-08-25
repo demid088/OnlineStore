@@ -3,27 +3,15 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 
-import 'materialize-css/dist/css/materialize.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/index.css'
 
-import 'materialize-css/dist/js/materialize.min.js'
+// import 'bootstrap'
 import App from './App.jsx'
 
 // ============================= JS
 
-// ============================= Materialize
-
-document.addEventListener('DOMContentLoaded', function() {
-  const options = {
-    constrainWidth: false,
-    coverTrigger: false,
-  }
-
-  const elems = document.querySelectorAll('.dropdown-trigger')
-  const instances = M.Dropdown.init(elems, options)
-
-  console.log(instances)
-});
+// ============================= Bootstrap
 
 // ============================= React
 

@@ -53,8 +53,8 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          (mode === 'development') ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader",
+          (mode === 'development') ? "style-loader" : MiniCssExtractPlugin.loader, // вставить CSS на страницу
+          "css-loader", // переводит CSS в модули CommonJS
           {
             loader: "postcss-loader",
             options: {
