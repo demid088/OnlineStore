@@ -14,7 +14,9 @@ console.log(searchDropdown)
 function Header() {
   return (
     <header className="header">
-      <button type="button" class="btn btn-primary">Primary</button>
+      <div className="container-xxl">
+        <button type="button" class="btn btn-primary">Primary</button>
+      </div>
     </header>
   );
 }

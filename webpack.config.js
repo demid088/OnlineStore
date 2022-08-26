@@ -1,9 +1,14 @@
 const path = require('path')
+const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
-const PluginTransformReactJsx = require("@babel/plugin-transform-react-jsx")
+const PurgeCSSPlugin = require('purgecss-webpack-plugin')
+
+const PATHS = {
+  src: path.join(__dirname, 'src')
+}
 
 const mode = (process.env.NODE_ENV === 'production') ? 'production' : 'development'
 const devtool = (mode === 'development') ? 'source-map' : undefined;
@@ -18,7 +23,7 @@ module.exports = {
   devServer: {
     static: './dist',
     open: true,
-    // port: 3000,
+    port: 3000,
   },
   entry: {
     script: path.resolve(__dirname, 'src', 'jsx', 'index.jsx'),
@@ -38,11 +43,23 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css',
-    })
+    }),
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+    }),
   ],
   optimization: {
-    // minimize: true,
     minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
   },
   module: {
     rules: [
@@ -83,7 +100,6 @@ module.exports = {
             ],
             plugins: [
               '@babel/plugin-transform-react-jsx',
-              // "@babel/plugin-transform-react-jsx-source",
             ],
           }
         }
