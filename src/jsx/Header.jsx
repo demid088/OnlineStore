@@ -15,7 +15,43 @@ function Header() {
   return (
     <header className="header">
       <div className="container-xxl">
-        <button type="button" class="btn btn-primary">Primary</button>
+        <nav className="navbar navbar-light bg-light">
+        <div className="container-fluid">
+          {/* LOGO */}
+          <a className="navbar-brand" href="#">
+            <img src={logo} alt="logo" width="59" height="51" className="d-inline-block align-text-top" />
+            BRAND
+          </a>
+          {/* Поиск */}
+          <div className="dropdown">
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuSearch" data-bs-toggle="dropdown" aria-expanded="false">Browse</button>
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuSearch">
+              <li><a className="dropdown-item" href="#">Действие</a></li>
+              <li><a className="dropdown-item" href="#">Другое действие</a></li>
+              <li><a className="dropdown-item" href="#">Что-то еще здесь</a></li>
+              {
+                dataKeys.map((caption, index) => {
+                  return (
+                    <Fragment key={index}>
+                      <li><strong>{caption.toUpperCase()}</strong></li>
+                      <li><hr className="dropdown-divider" /></li>
+                      {searchDropdown[caption].map((item, index) => {
+                        return(
+                          <li key={index}><a className="dropdown-item" href="#">{item}</a></li>
+                        )
+                      })}
+                    </Fragment>
+                  )
+                })
+              }
+            </ul>
+          </div>
+          <form className="d-flex">
+            <input className="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" />
+            <button className="btn btn-outline-success" type="submit">Поиск</button>
+          </form>
+        </div>
+        </nav>
       </div>
     </header>
   );
@@ -87,8 +123,8 @@ BRAND
           </div>
 
           <div className="col s2 right">
-            <a class="btn-floating white">
-              <i class="material-icons black-text">shopping_cart</i>
+            <a className="btn-floating white">
+              <i className="material-icons black-text">shopping_cart</i>
             </a>
             <a className="dropdown-trigger" href="#!" data-target="dropdown2">My Account<i className="material-icons">arrow_drop_down</i></a>
           </div> 
@@ -139,7 +175,7 @@ BRAND
         </div>
 
         <div className="header__account col s3">
-          <i class="material-icons black-text">shopping_cart</i>
+          <i className="material-icons black-text">shopping_cart</i>
           <button className='btn'>
             <span>My Account</span>
             <i className="material-icons">arrow_drop_down</i>
@@ -171,31 +207,31 @@ BRAND
       </ul>
       {/* NAV *
       <nav>
-        <div class="nav-wrapper row">
+        <div className="nav-wrapper row">
           {/* LOGO *
           <div className="col s3">
-            <a href="#!" class="brand-logo col s3">Logo</a>
+            <a href="#!" className="brand-logo col s3">Logo</a>
           </div>
           
           {/* Search Bar *
           <div className="col s6">
             <form className=''>
-              <div class="input-field col s6">
+              <div className="input-field col s6">
                 <input id="search" type="search" required />
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
+                <label className="label-icon" for="search"><i className="material-icons">search</i></label>
+                <i className="material-icons">close</i>
               </div>
             </form>
           </div>
 
           {/* Account *
           <div className="col s3">
-            <ul class="right hide-on-med-and-down col s3">
-              <li><a class="btn-floating red">
-                    <i class="material-icons">shopping_cart</i>
+            <ul className="right hide-on-med-and-down col s3">
+              <li><a className="btn-floating red">
+                    <i className="material-icons">shopping_cart</i>
                   </a></li>
               {/* <!-- Dropdown Trigger --> *
-              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">My Account<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">My Account<i className="material-icons right">arrow_drop_down</i></a></li>
             </ul>
           </div>
 

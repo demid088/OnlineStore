@@ -6,7 +6,7 @@ import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/index.css'
 
-// import 'bootstrap'
+import 'bootstrap'
 import App from './App.jsx'
 
 // ============================= JS
