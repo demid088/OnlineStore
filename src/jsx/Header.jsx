@@ -7,50 +7,92 @@ import logo from '../assets/img/logo.png'
 //=========================================== DATABASE
 import data from '../DATA.JSON'
 const searchDropdown = data.searchDropdown
+const menu = data.menu
 const dataKeys = Object.keys(searchDropdown)
-console.log(searchDropdown)
 //=========================================== 
 
 function Header() {
   return (
-    <header className="header">
+    <header className="header bg-light">
       <div className="container-xxl">
-        <nav className="navbar navbar-light bg-light">
-        <div className="container-fluid">
-          {/* LOGO */}
-          <a className="navbar-brand" href="#">
-            <img src={logo} alt="logo" width="59" height="51" className="d-inline-block align-text-top" />
-            BRAND
-          </a>
-          {/* Поиск */}
-          <div className="dropdown">
-            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuSearch" data-bs-toggle="dropdown" aria-expanded="false">Browse</button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuSearch">
-              <li><a className="dropdown-item" href="#">Действие</a></li>
-              <li><a className="dropdown-item" href="#">Другое действие</a></li>
-              <li><a className="dropdown-item" href="#">Что-то еще здесь</a></li>
-              {
-                dataKeys.map((caption, index) => {
-                  return (
-                    <Fragment key={index}>
-                      <li><strong>{caption.toUpperCase()}</strong></li>
-                      <li><hr className="dropdown-divider" /></li>
-                      {searchDropdown[caption].map((item, index) => {
-                        return(
-                          <li key={index}><a className="dropdown-item" href="#">{item}</a></li>
-                        )
-                      })}
-                    </Fragment>
-                  )
-                })
-              }
-            </ul>
+        {/* MAIN */}
+        <nav className="navbar">
+          <div className="container-fluid flex-nowrap">
+            {/* LOGO */}
+            <a className="navbar-brand" href="#">
+              <img className='me-2' src={logo} alt="logo" width="59" height="51" />
+              <span class="align-middle">BRAN
+                <strong className='text-danger'>D</strong>
+              </span>
+            </a>
+            {/* Поиск */}
+            <form className="input-group w-auto">
+              <select className="form-select bg-light" aria-label="Browse">
+                <option selected disabled>Browse...</option>
+                {
+                    dataKeys.map((caption, index) => {
+                      return (
+                        <Fragment key={index}>
+                          {/* <option disabled><hr /></option> */}
+                          <option disabled className="text-center text-uppercase fs-5 fw-semibold lh-lg">{caption}</option>
+                          {searchDropdown[caption].map((item, index) => {
+                            return(
+                              <option key={index}><a className="dropdown-item" href="#">{item}</a></option>
+                            )
+                          })}
+                        </Fragment>
+                      )
+                    })
+                  }
+              </select>
+              <input className="form-control" type="search" placeholder="Search for Item..." aria-label="Search" />
+              <button className="btn btn-secondary" type="submit"><i className="bi bi-search" /></button>
+            </form>
+            {/* Cart Account */}
+            <div className='d-flex align-items-center'>
+              <a class="fs-2 link-dark" href="#"><i className="bi bi-cart2" /></a>
+              <div class="dropdown ms-4">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownAccount" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                  My Account
+                </button>
+                <form class="dropdown-menu p-3">
+                  <div class="mb-3">
+                    <label for="exampleDropdownFormEmail2" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password" />
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck2" />
+                      <label class="form-check-label" for="dropdownCheck2">
+                        Stay signed in
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-secondary">Log In</button>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Forgot your password?</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Register!</a>
+                </form>
+              </div>
+            </div>
           </div>
-          <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" />
-            <button className="btn btn-outline-success" type="submit">Поиск</button>
-          </form>
-        </div>
+        </nav>
+        {/* MENU */}
+        <nav class="nav text-uppercase fw-semibold border-top justify-content-center mt-1 py-1">
+          {
+            menu.map(
+              (item, index) => {
+                return(
+                  <a key={index} class="nav-link link-dark mx-2" href="#">{item}</a>
+                )
+              }
+            )
+          }
         </nav>
       </div>
     </header>

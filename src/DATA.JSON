@@ -24,5 +24,14 @@
       "Blazers",
       "Jackets/Vests"
     ]
-  }
+  },
+  "menu": [
+    "Home",
+    "Man",
+    "Women",
+    "Kids",
+    "Accoseriese",
+    "Featured",
+    "Hot Deals"
+  ]
 }
