@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import '../css/Header.css'
 
-import logo from '../assets/img/logo.png'
+import logo from '../img/logo.png'
 
 //=========================================== DATABASE
 import data from '../DATA.JSON'

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import '../css/Slider.css'
 
-import slide_1 from '../assets/img/slider/slide_1.jpg'
+import slide_1 from '../img/slider/slide_1.jpg'
 
 function Slider() {
   return (
