@@ -1,0 +1,22 @@
+.card_canvas {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  min-width: 1px;
+  min-height: 80px;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.card_text, .card_subtext {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #222222;
+}
+
+.card_subtext {
+  font-size: 30px;
+  color: #f16d7f;
+}
