@@ -3,6 +3,7 @@ import Header from './Header.jsx'
 import Slider from './Slider.jsx';
 import Category from './Category.jsx';
 import Product from './Product.jsx';
+import Feature from './Feature.jsx';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Slider />
       <Category />
       <Product />
+      <Feature />
     </>
   );
 }

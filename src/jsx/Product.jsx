@@ -15,7 +15,7 @@ function Product() {
         <h2>Fetured Items</h2>
         <h6 className='text-muted'>Shop for items based on what we featured in this week</h6>
       </header>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-1 mb-5">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-1 mb-5">
         {
           prodIDs.map((id, index) => {
             return (
@@ -33,7 +33,7 @@ function Product() {
         }
       </div>
       <footer className='text-center'>
-        <button className='btn btn-danger'>Browse All Product<i class="bi bi-arrow-right-short" /></button>
+        <button className='btn btn-danger'>Browse All Product<i className="bi bi-arrow-right-short" /></button>
       </footer>
     </section>
   )
