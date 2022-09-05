@@ -37,57 +37,57 @@
   "products": {
     "id_1": {
       "name": "Mango People T-shirt",
-      "price": "52.00",
+      "price": "50.00",
       "currency": "$",
-      "img": "../img/product/product_1.jpg"
+      "img": "./img/product/product_1.jpg"
     },
     "id_2": {
       "name": "Mango People T-shirt",
-      "price": "52.00",
+      "price": "51.00",
       "currency": "$",
-      "img": "../img/product/product_2.jpg"
+      "img": "./img/product/product_2.jpg"
     }
     ,
     "id_3": {
       "name": "Mango People T-shirt",
       "price": "52.00",
       "currency": "$",
-      "img": "../img/product/product_3.jpg"
+      "img": "./img/product/product_3.jpg"
     }
     ,
     "id_4": {
       "name": "Mango People T-shirt",
-      "price": "52.00",
+      "price": "53.00",
       "currency": "$",
-      "img": "../img/product/product_4.jpg"
+      "img": "./img/product/product_4.jpg"
     }
     ,
     "id_5": {
       "name": "Mango People T-shirt",
-      "price": "52.00",
+      "price": "54.00",
       "currency": "$",
-      "img": "../img/product/product_5.jpg"
+      "img": "./img/product/product_5.jpg"
     }
     ,
     "id_6": {
       "name": "Mango People T-shirt",
-      "price": "52.00",
+      "price": "55.00",
       "currency": "$",
-      "img": "../img/product/product_6.jpg"
+      "img": "./img/product/product_6.jpg"
     }
     ,
     "id_7": {
       "name": "Mango People T-shirt",
-      "price": "52.00",
+      "price": "56.00",
       "currency": "$",
-      "img": "../img/product/product_7.jpg"
+      "img": "./img/product/product_7.jpg"
     }
     ,
     "id_8": {
       "name": "Mango People T-shirt",
-      "price": "52.00",
+      "price": "57.00",
       "currency": "$",
-      "img": "../img/product/product_8.jpg"
+      "img": "./img/product/product_8.jpg"
     }
   }
 }

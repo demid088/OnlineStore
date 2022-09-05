@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
 const PurgeCSSPlugin = require('purgecss-webpack-plugin')
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 const PATHS = {
   src: path.join(__dirname, 'src')
@@ -46,6 +47,14 @@ module.exports = {
     }),
     new PurgeCSSPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { 
+          from: path.resolve(__dirname, 'src', 'img'),
+          to: "img"
+        },
+      ],
     }),
   ],
   optimization: {
