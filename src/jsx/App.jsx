@@ -5,6 +5,7 @@ import Category from './Category.jsx';
 import Product from './Product.jsx';
 import Feature from './Feature.jsx';
 import Subscribe from './Subscribe.jsx';
+import Footer from './Footer.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Product />
       <Feature />
       <Subscribe />
+      <Footer />
     </>
   );
 }

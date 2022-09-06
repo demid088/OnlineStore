@@ -1,0 +1,20 @@
+.social_link_btn {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social_link_btn:hover {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.social_link_icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
