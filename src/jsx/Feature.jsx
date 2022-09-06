@@ -8,7 +8,7 @@ function Feature() {
       <div className="card border-dark text-bg-dark">
         <div class="row g-0">
           <div class="col-12 col-md-7">
-            <img src='../img/feature/feature_bg.jpg' class="img-fluid rounded-start w-100 h-100" alt="feature" />
+            <img src='../img/feature/feature_bg.jpg' class="rounded-start w-100 h-100" alt="feature" />
           </div>
           <div class="col-12 col-md-5">
             <div class="card-body h-100 ">

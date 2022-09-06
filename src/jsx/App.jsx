@@ -4,6 +4,7 @@ import Slider from './Slider.jsx';
 import Category from './Category.jsx';
 import Product from './Product.jsx';
 import Feature from './Feature.jsx';
+import Subscribe from './Subscribe.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Category />
       <Product />
       <Feature />
+      <Subscribe />
     </>
   );
 }

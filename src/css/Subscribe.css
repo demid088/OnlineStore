@@ -1,0 +1,15 @@
+.carousel-indicators [data-bs-target] {
+  background-color: #adb5bd;
+}
+
+.carousel-indicators .active {
+  background-color: #dc3545;
+}
+
+.subscribe {
+  background-image: url(../img/subscribe/subscribe_bg.jpg);
+}
+
+.subscribe_bg_img {
+  z-index: -1;
+}
