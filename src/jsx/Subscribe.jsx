@@ -9,7 +9,7 @@ function Subscribe() {
         <div className="row row-cols-1 row-cols-lg-2 align-items-center text-bg-light pt-lg-5 pb-4 bg-transparent">
           {/* LEFT */}
           <div className="col px-5 px-lg-3 pt-lg-5">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="../img/subscribe/subscribe_slide_photo.png" class="d-block position-absolute top-0 left-0" alt="photo_account" />
