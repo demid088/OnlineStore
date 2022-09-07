@@ -30,61 +30,73 @@ function Footer() {
           <div className="col-12 text-center text-md-start col-md-3 col-lg-2">
             <h5 className='text-uppercase text-danger mb-4'><b>COMPANY</b></h5>
             <ul class="list-group list-group-flush d-block text-muted">
-              <li class="d-block my-4">
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Home</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Shop</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>About</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>How It Works</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Contact</b></a>
               </li>
             </ul>
           </div>
           {/* 3 */}
           <div className="col-12 text-center text-md-start col-md-3 col-lg-2">
-            <h5 className='text-uppercase text-danger'><b>INFORMATION</b></h5>
+            <h5 className='text-uppercase text-danger mb-4'><b>INFORMATION</b></h5>
             <ul class="list-group list-group-flush d-block text-muted">
-              <li class="d-block my-4">
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Tearms & Condition</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Privacy Policy</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>How to Buy</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>How to Sell</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Promotion</b></a>
               </li>
             </ul>
           </div>
           {/* 4 */}
           <div className="col-12 text-center text-md-start col-md-3 col-lg-2">
-            <h5 className='text-uppercase text-danger'><b>SHOP CATEGORY</b></h5>
+            <h5 className='text-uppercase text-danger mb-4'><b>SHOP CATEGORY</b></h5>
             <ul class="list-group list-group-flush d-block text-muted">
-              <li class="d-block my-4">
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Men</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Women</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Child</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Apparel</b></a>
               </li>
-              <li class="d-block my-4">
+              <br />
+              <li class="d-inline-block my-2">
                 <a href="" className='text-decoration-none text-reset'><b>Brows All</b></a>
               </li>
             </ul>
