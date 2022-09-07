@@ -8,8 +8,14 @@
 
 .subscribe {
   background-image: url(../img/subscribe/subscribe_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .subscribe_bg_img {
   z-index: -1;
+}
+
+.input_email {
+  min-width: 150px !important;
 }

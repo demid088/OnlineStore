@@ -13,55 +13,19 @@ function Category() {
       <div class="row row-cols-1 row-cols-md-2 g-4">
         {/* HOT DEAL FOR MEN */}
         <div class="col">
-          <div class="card text-bg-light">
-            <img src={category_1} class="card-img" alt="HOT DEAL FOR MEN" />
-            <div class="card-img-overlay">
-              <div className='card_canvas'>
-                <span className='card_text'>HOT DEAL</span>
-                <br />
-                <span className='card_subtext'>FOR MEN</span>
-              </div>
-            </div>
-          </div>
+          <img src={category_1} class="card-img" alt="HOT DEAL FOR MEN" />
         </div>
         {/* new arrivals FOR kids */}
         <div class="col">
-          <div class="card text-bg-light">
-            <img src={category_4} class="card-img" alt="new arrivals FOR kids" />
-            <div class="card-img-overlay">
-              <div className='card_canvas'>
-                <span className='card_text'>new arrivals</span>
-                <br />
-                <span className='card_subtext'>FOR kids</span>
-              </div>
-            </div>
-          </div>
+          <img src={category_4} class="card-img" alt="new arrivals FOR kids" />
         </div>
         {/* 30% offer women */}
         <div class="col">
-          <div class="card text-bg-light">
-            <img src={category_2} class="card-img" alt="30% offer women" />
-            <div class="card-img-overlay">
-              <div className='card_canvas'>
-                <span className='card_text'>30% offer</span>
-                <br />
-                <span className='card_subtext'>women</span>
-              </div>
-            </div>
-          </div>
+          <img src={category_2} class="card-img" alt="30% offer women" />
         </div>
         {/* LUXIROUS & trendy ACCESORIES */}
         <div class="col">
-          <div class="card text-bg-light">
-            <img src={category_3} class="card-img" alt="LUXIROUS & trendy ACCESORIES" />
-            <div class="card-img-overlay">
-              <div className='card_canvas'>
-                <span className='card_text'>LUXIROUS & trendy</span>
-                <br />
-                <span className='card_subtext'>ACCESORIES</span>
-              </div>
-            </div>
-          </div>
+          <img src={category_3} class="card-img" alt="LUXIROUS & trendy ACCESORIES" />
         </div>
       </div>
     </section>
