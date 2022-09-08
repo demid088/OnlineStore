@@ -89,5 +89,8 @@
       "currency": "$",
       "img": "./img/product/product_8.jpg"
     }
+  },
+  "catalog": {
+    
   }
 }

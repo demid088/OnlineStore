@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { NavLink } from "react-router-dom";
 
 import '../css/Header.css'
 
@@ -19,12 +20,12 @@ function Header() {
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
             {/* LOGO */}
-            <a className="navbar-brand" href="#">
+            <NavLink className="navbar-brand" to="/">
               <img className='me-2' src={logo} alt="logo" width="59" height="51" />
               <span className="align-middle">BRAN
                 <strong className='text-danger'>D</strong>
               </span>
-            </a>
+            </NavLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -89,12 +90,12 @@ function Header() {
           </div>
         </nav>
         {/* MENU */}
-        <nav className="nav text-uppercase fw-semibold border-top justify-content-center mt-1 py-1">
+        <nav className="nav text-uppercase fw-semibold border-top justify-content-center mt-1 pt-1">
           {
             menu.map(
               (item, index) => {
                 return(
-                  <a key={index} className="nav-link link-dark mx-2" href="#">{item}</a>
+                  <NavLink key={index} className="nav-link link-dark mx-2" to="/catalog">{item}</NavLink>
                 )
               }
             )
