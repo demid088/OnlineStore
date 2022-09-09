@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Slider from './Slider.jsx';
 import Category from './Category.jsx';
 import Product from './Product.jsx';

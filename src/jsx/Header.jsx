@@ -14,7 +14,7 @@ const dataKeys = Object.keys(searchDropdown)
 
 function Header() {
   return (
-    <header className="header bg-light">
+    <header className="header bg-white">
       <div className="container-xxl">
         {/* MAIN */}
         <nav className="navbar navbar-expand-lg">
