@@ -4,7 +4,7 @@ import '../css/Feature.css'
 
 function Feature() {
   return (
-    <section className="feature container-xxl mt-5">
+    <section className="feature container-xxl my-5">
       <div className="card border-dark text-bg-dark">
         <div class="row g-0">
           <div class="col-12 col-md-7">

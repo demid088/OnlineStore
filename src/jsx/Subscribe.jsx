@@ -6,7 +6,7 @@ import subscribe_photo from '../img/subscribe/subscribe_slide_photo.png'
 
 function Subscribe() {
   return (
-    <section className="subscribe container-fluid mt-5 p-0">
+    <section className="subscribe container-fluid p-0">
       <div className="container-xxl p-0 pt-5">
         <div className="row row-cols-1 row-cols-lg-2 align-items-center text-bg-light pt-lg-5 pb-4 bg-transparent">
           {/* LEFT */}
