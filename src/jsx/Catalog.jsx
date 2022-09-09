@@ -13,11 +13,15 @@ const catalog = data.catalog
 
 function Catalog() {
   return (
-    <section>
+    <>
       <Breadcrumb crumbs={['Home', 'Catalog', 'MEN']} />
-      <h1>CATALOG.JSX</h1>
+      
+      <section>
+        <h1>CATALOG.JSX</h1>
+      </section>
+
       <Feature2 />
-    </section>
+    </>
   );
 }
 

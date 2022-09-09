@@ -6,9 +6,9 @@ import logo from '../img/logo.png'
 
 function Footer() {
   return (
-    <section className="footer container-fluid bg-white m-0 p-0 pt-5">
+    <footer className="footer container-fluid bg-white m-0 p-0 pt-5">
       {/* LINKS */}
-      <div className="container-xxl">
+      <section className="container-xxl">
         <div className="row py-5">
           {/* 1 */}
           <div className="col-12 col-lg-5 me-lg-5 mb-5">
@@ -102,9 +102,9 @@ function Footer() {
             </ul>
           </div>
         </div>
-      </div>
+      </section>
       {/* COPYRIGHT */}
-      <footer className='bg-light py-4'>
+      <section className='bg-light py-4'>
         <div className="container-xxl">
           <div className="row row-cols-1 row-cols-sm-2 text-center text-sm-start">
             <div className="col">
@@ -133,8 +133,8 @@ function Footer() {
             </div>
           </div>
         </div>
-      </footer>
-    </section>
+      </section>
+    </footer>
   )
 }
 
