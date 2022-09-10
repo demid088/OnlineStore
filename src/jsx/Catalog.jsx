@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
-import { Link } from "react-router-dom"
+import React from 'react'
 
 import Breadcrumb from './Breadcrumb.jsx'
+import ProductFilter from './ProductFilter.jsx'
 import Feature2 from './Feature2.jsx'
 
 import '../css/Catalog.css'
@@ -14,12 +14,8 @@ const catalog = data.catalog
 function Catalog() {
   return (
     <>
-      <Breadcrumb crumbs={['Home', 'Catalog', 'MEN']} />
-      
-      <section>
-        <h1>CATALOG.JSX</h1>
-      </section>
-
+      <Breadcrumb crumbs={['Home', 'Catalog', 'MAN']} />
+      <ProductFilter />
       <Feature2 />
     </>
   );

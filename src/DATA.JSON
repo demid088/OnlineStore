@@ -90,7 +90,14 @@
       "img": "./img/product/product_8.jpg"
     }
   },
-  "catalog": {
-    
-  }
+  "catalog": [
+    {
+      "id": 1,
+      "category": "Shoes",
+      "title": "Mango People T-shirt",
+      "size": "m",
+      "img": "./img/product/product_8.jpg",
+      "price": 57.00
+    }
+  ]
 }
