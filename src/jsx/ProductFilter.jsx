@@ -12,8 +12,8 @@ const catalog = data.catalog
 function ProductFilter() {
   return (
     <section className='product_filter container-xxl my-5'>
-      <div className="row">
-        <aside className="col me-2 sidebar">
+      <div className="row justify-content-center">
+        <aside className="col-12 col-sm-6 col-lg-auto mx-auto mx-lg-0 p-0 px-lg-4 sidebar">
           <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -79,43 +79,43 @@ function ProductFilter() {
             </div>
           </div>
         </aside>
-        <div className="col-9">
+        <div className="col-12 col-lg-9 mt-5 mt-lg-0">
           {/* SIZE & PRICE */}
           <div className="row bg-white pt-3">
             {/* SIZE */}
-            <div className="col mx-5 mt-0 mb-4">
+            <div className="col-12 col-sm-6 px-3 px-sm-4 mt-0 mb-4">
               <h5 className='mb-4'>SIZE</h5>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline m-3 m-sm-2">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="XXS" />
                 <label class="form-check-label" for="inlineCheckbox1">XXS</label>
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline m-3 m-sm-2">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="XS" />
                 <label class="form-check-label" for="inlineCheckbox2">XS</label>
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline m-3 m-sm-2">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="S" />
                 <label class="form-check-label" for="inlineCheckbox3">S</label>
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline m-3 m-sm-2">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="M" />
                 <label class="form-check-label" for="inlineCheckbox4">M</label>
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline m-3 m-sm-2">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="L" />
                 <label class="form-check-label" for="inlineCheckbox5">L</label>
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline m-3 m-sm-2">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="XL" />
                 <label class="form-check-label" for="inlineCheckbox6">XL</label>
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline m-3 m-sm-2">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="XXL" />
                 <label class="form-check-label" for="inlineCheckbox7">XXL</label>
               </div>
             </div>
             {/* PRICE */}
-            <div className="col mx-5 mt-0 mb-4">
+            <div className="col-12 col-sm-6 px-3 px-sm-4 mt-0 mb-4">
               <h5 className='mb-4'>PRICE</h5>
               <Nouislider
                 className="slider-styled"
@@ -126,8 +126,8 @@ function ProductFilter() {
             </div>
           </div>
           {/* SORT BY */}
-          <div className="row bg-light p-3">
-            <div className="col-3">
+          <div className="row bg-light p-sm-3">
+            <div className="col-12 col-sm-6 col-md-4 my-3 m-sm-0">
               <div class="input-group">
                 <label class="input-group-text bg-white" for="inputGroupSortBy">Sort By</label>
                 <select class="form-select bg-white" id="inputGroupSortBy">
@@ -137,7 +137,7 @@ function ProductFilter() {
                 </select>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-sm-6 col-md-4 my-3 m-sm-0">
               <div class="input-group">
                 <label class="input-group-text bg-white" for="inputGroupShow">Show</label>
                 <select class="form-select bg-white" id="inputGroupShow">
@@ -153,7 +153,7 @@ function ProductFilter() {
             </div>
           </div>
           {/* PRODUCTS */}
-          <div className="row row-cols-3 bg-white g-4 my-2 mb-5">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 bg-white g-4 my-2 mb-5">
           {
             catalog.map((objProduct, index) => {
               if (index > 8) return;
@@ -179,7 +179,7 @@ function ProductFilter() {
           </div>
           {/* PAGINATION */}
           <div className="row">
-            <div className="col d-flex justify-content-start align-items-center">
+            <div className="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start align-items-center mb-5 mb-sm-0">
               <nav aria-label="Product navigation">
                 <ul class="pagination mb-0">
                   <li class="page-item">
@@ -204,7 +204,7 @@ function ProductFilter() {
                 </ul>
               </nav>
             </div>
-            <div className="col d-flex justify-content-end align-items-center">
+            <div className="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end align-items-center">
               <button type="button" class="btn btn-outline-danger px-5">View All</button>
             </div>
           </div>
