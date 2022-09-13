@@ -13,7 +13,7 @@ function ProductFilter() {
   return (
     <section className='product_filter container-xxl my-5'>
       <div className="row">
-        <div className="col-3 sidebar">
+        <aside className="col me-2 sidebar">
           <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -78,10 +78,10 @@ function ProductFilter() {
               </div>
             </div>
           </div>
-        </div>
+        </aside>
         <div className="col-9">
           {/* SIZE & PRICE */}
-          <div className="row">
+          <div className="row bg-white pt-3">
             {/* SIZE */}
             <div className="col mx-5 mt-0 mb-4">
               <h5 className='mb-4'>SIZE</h5>
@@ -153,8 +153,60 @@ function ProductFilter() {
             </div>
           </div>
           {/* PRODUCTS */}
-          <div className="row bg-white">
-            {/* ЦИКЛ СДЕЛАТЬ */}
+          <div className="row row-cols-3 bg-white g-4 my-2 mb-5">
+          {
+            catalog.map((objProduct, index) => {
+              if (index > 8) return;
+              return (
+                <div key={index} className="col">
+                  <div className="card">
+                    <img src={objProduct.img} className="card-img-top" alt={objProduct.title} />
+                    <div className="card-body">
+                      <h5 className="card-title">{objProduct.title}</h5>
+                      <div className="d-flex justify-content-between">
+                        <span className='text-muted'>{objProduct.category}</span>
+                        <span className='text-muted'>{objProduct.size}</span>
+                      </div>
+                      <p className="card-text text-danger">
+                        <b>${objProduct.price}</b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
+          </div>
+          {/* PAGINATION */}
+          <div className="row">
+            <div className="col d-flex justify-content-start align-items-center">
+              <nav aria-label="Product navigation">
+                <ul class="pagination mb-0">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Prev">
+                      <i className="bi bi-chevron-left" aria-hidden="true" />
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                    <i className="bi bi-chevron-right" aria-hidden="true" />
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="col d-flex justify-content-end align-items-center">
+              <button type="button" class="btn btn-outline-danger px-5">View All</button>
+            </div>
           </div>
         </div>
       </div>

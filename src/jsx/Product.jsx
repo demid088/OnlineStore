@@ -33,7 +33,10 @@ function Product() {
         }
       </div>
       <footer className='text-center'>
-        <button className='btn btn-danger'>Browse All Product<i className="bi bi-arrow-right-short" /></button>
+        <button className='btn btn-danger'>
+          Browse All Product
+          <i className="bi bi-arrow-right-short" />
+          </button>
       </footer>
     </section>
   )
